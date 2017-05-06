@@ -5,11 +5,11 @@ var app = express();
 var methodOverride = require('method-override');
 var burger = require('../models/burger.js');
 
-router.get('/', function(req,res) {
-     res.redirect('/burgers');
-});
+// router.get('/', function(req,res) {
+//      res.redirect('/burgers');
+// });
 
-router.get('/burgers', function(req,res) {
+router.get('/', function(req,res) {
     burger.selectAll(function(data){
           console.log();
         res.render('index', {burgers : data});
