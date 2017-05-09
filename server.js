@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -28,4 +28,4 @@ app.use("/", routes);
 
 app.listen(port);
 
-console.log('App listening on PORT ' + port);
+console.log('App listening on port %s ' , port);
